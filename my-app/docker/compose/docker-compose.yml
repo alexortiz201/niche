@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: './build/node/Dockerfile'
+    environment:
+      APP_ENV: 'dev'
+      WEB_DOCUMENT_ROOT: '/public'
+    volumes:
+      - ./../../:/public
+    ports:
+      - 80:80
