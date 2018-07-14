@@ -1,0 +1,19 @@
+{
+  "name": "niche-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "author": "alexortiz alexanderortiz.201@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch src src/app.js",
+    "start": "node src/app.js",
+    "test": "echo \"No tests\""
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "pg": "^4.4.1",
+    "retry": "^0.7.0"
+  }
+}

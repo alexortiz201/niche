@@ -1,0 +1,47 @@
+version: '3'
+
+volumes:
+  database_data:
+    driver: local
+
+services:
+################################
+#   Setup postgres container
+################################
+  db:
+    image: postgres:latest
+    volumes:
+      - database_data:/var/lib/postgresql/data
+
+################################
+#   Setup node container
+################################
+  server:
+    build: ./server
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    volumes:
+      - ./server:/usr/src/app/
+    links:
+      - db
+    environment:
+      - PGHOST=db
+      - PGDATABASE=postgres
+      - PGUSER=postgres
+
+################################
+#   Setup frontend container
+################################
+  frontend:
+    build: ./client
+    expose:
+      - 4000
+    ports:
+      - 4000:3000
+    volumes:
+      - ./client/src:/usr/src/app/src
+      - ./client/public:/usr/src/app/public
+    links:
+      - server  
