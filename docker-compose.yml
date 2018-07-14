@@ -34,7 +34,7 @@ services:
 ################################
 #   Setup frontend container
 ################################
-  frontend:
+  client:
     build: ./client
     expose:
       - 4000
