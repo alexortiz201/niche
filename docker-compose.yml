@@ -36,6 +36,9 @@ services:
 ################################
   client:
     build: ./client
+    # yarn start has issues when killing container,
+    # exit 1
+    command: npm start
     expose:
       - 4000
     ports:
@@ -44,4 +47,4 @@ services:
       - ./client/src:/usr/src/app/src
       - ./client/public:/usr/src/app/public
     links:
-      - server  
+      - server

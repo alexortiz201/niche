@@ -14,6 +14,6 @@ Niche gym software.
 
 ### Running:
 - Start up containers for client, server, and db with `yarn start`
-- Test client is live at localhost:4000
+- Test client is live at localhost:3000
 - Test api is live at localhost:5000/api
  

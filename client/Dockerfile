@@ -14,4 +14,3 @@ ADD public /usr/src/app/public
 
 RUN yarn build
 
-CMD [ "yarn", "start" ]
