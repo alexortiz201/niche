@@ -4,13 +4,10 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
-    "client": "node start-client.js",
+    "start": "docker-compose up --build", 
     "lint": "eslint ."
   },
   "devDependencies": {
-    "concurrently": "3.1.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
