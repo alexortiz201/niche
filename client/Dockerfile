@@ -6,11 +6,12 @@ WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
 
-RUN npm install
+RUN npm install yarn
+RUN yarn install
 
 ADD src /usr/src/app/src
 ADD public /usr/src/app/public
 
-RUN npm build
+RUN yarn build
 
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]

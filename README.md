@@ -13,7 +13,7 @@ Niche gym software.
 - [ ] Setup testing
 
 ### Running:
-- Boot with `npm start`
+- Start up containers for client, server, and db with `yarn start`
 - Test client is live at localhost:4000
 - Test api is live at localhost:5000/api
  
