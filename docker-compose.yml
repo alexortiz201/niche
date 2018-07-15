@@ -18,6 +18,7 @@ services:
 ################################
   server:
     build: ./server
+    command: npm start
     expose:
       - 5000
     ports:
