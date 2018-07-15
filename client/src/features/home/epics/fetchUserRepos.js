@@ -1,3 +1,7 @@
+/**
+ * To fix missing deps for observable required an install of
+ * 'rxjs-compat'.
+ */
 import { ajax } from 'rxjs/observable/dom/ajax';
 import { ofType } from 'redux-observable';
 import { catchError, mergeMap, map } from 'rxjs/operators';
