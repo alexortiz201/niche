@@ -8,7 +8,7 @@ class Home extends Component {
 			<div id="home">
 				<Container>
 					<h2 className="text-center">Home</h2>
-					<UserRepos />
+					<UserRepos username="alexortiz201" />
 				</Container>
 			</div>
 		);

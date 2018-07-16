@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { createEpicMiddleware } from 'redux-observable';
 import createHistory from 'history/createHashHistory';
 import { routerMiddleware } from 'react-router-redux';
@@ -18,8 +19,10 @@ const appRouterMiddleware = routerMiddleware(history);
 
 const store = createStore(
     rootReducer,
-    applyMiddleware(epicMiddleware),
-    applyMiddleware(appRouterMiddleware)
+    composeWithDevTools(
+	    applyMiddleware(epicMiddleware),
+	    applyMiddleware(appRouterMiddleware)
+    )
 );
 
 epicMiddleware.run(rootEpic, {

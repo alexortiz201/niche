@@ -10,7 +10,7 @@ import { bindActionCreators } from 'redux'
 class UserRepos extends Component {
 
 	componentDidMount() {
-		let username = 'aortiz';
+		let username = this.props.username;
 		this.props.doUserRepos(username);
 	}
 
