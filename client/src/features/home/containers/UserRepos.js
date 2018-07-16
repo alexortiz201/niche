@@ -16,7 +16,7 @@ class UserRepos extends Component {
 
 	render() {
 		let { repos } = this.props;
-		let pageContent = ''
+		let pageContent = '';
 
 		if (this.props.loading) {
       pageContent = (
@@ -38,7 +38,6 @@ class UserRepos extends Component {
 				{pageContent}
 			</div>
 		);
-
 	}
 }
 
