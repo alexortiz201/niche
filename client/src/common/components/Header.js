@@ -10,9 +10,7 @@ import {
 } from 'reactstrap';
 import { Container } from 'reactstrap';
 
-
 class Header extends Component {
-
 	constructor(props) {
     super(props);
 
@@ -47,7 +45,7 @@ class Header extends Component {
 	        </Navbar>
         </Container>
 	    </header>
-	  )
+	  );
 	}
 }
 

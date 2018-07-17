@@ -19,7 +19,7 @@ export const RoutesWrapperFactory = ({ store, history, routes } = {}) => {
 		</div>
 	  </ConnectedRouter>
 	</Provider>);
-};
+};``
 
 RoutesWrapperFactory.propTypes = {
   store: PropTypes.object.isRequired,
