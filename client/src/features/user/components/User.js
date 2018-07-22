@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import { Button, Container } from 'reactstrap';
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Link
-// } from 'react-router-dom';
-
 import logo from './logo.svg';
-import './Home.css';
-import UserRepos from '../containers/UserRepos';
+import './User.css';
+import UserContainer from '../containers/User';
 
-
-class Home extends Component {
+class User extends Component {
   render() {
     return (
       <div className="Home">
@@ -24,11 +17,11 @@ class Home extends Component {
 	        <p className="Home-intro">
 	          To get started, edit <code>src/Home.js</code> and save to reload.
 	        </p>
-	        <UserRepos username="alexortiz201" />
+	        <UserContainer username="alexortiz201" />
         </Container>
       </div>
     );
   }
 }
 
-export default Home;
+export default User;

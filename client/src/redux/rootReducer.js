@@ -7,12 +7,12 @@ import {
 // import common from './common/reducers';
 // import catalog from './catalog/reducers';
 import home from '../features/home/reducers';
-// import product from './product/reducers';
-// import archives from './archives/reducers';
+import user from '../features/user/reducers';
 
 const rootReducer = combineReducers({
   // common,
   home,
+  user,
   toastr: toastrReducer,
   router: routerReducer
 });
