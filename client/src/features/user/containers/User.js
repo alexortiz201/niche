@@ -41,7 +41,7 @@ class UserContainer extends Component {
 
 UserContainer.propTypes = {
 	user: PropTypes.object,
-	loading: PropTypes.boolean,
+	loading: PropTypes.bool,
 };
 
 const getUserInfoState = state => ({ name: state.user.info.github.name });
