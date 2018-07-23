@@ -2,12 +2,12 @@ import { combineEpics } from 'redux-observable';
 
 // import your Home Module epics here and combine them
 // Place all epics in same directory
-import userInfo from './fetchUser';
-import userRepos from './fetchUserRepos';
+import info from './fetchUser';
+import repos from './fetchUserRepos';
 
 const user = combineEpics(
-	userInfo,
-  userRepos,
+	info,
+  repos,
 );
 
 export default user;

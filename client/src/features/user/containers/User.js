@@ -25,7 +25,7 @@ class UserContainer extends Component {
 		} else {
 			pageContent = (
 				<ul className="repos">
-					{JSON.stringify(user)}
+					{ JSON.stringify(user) }
 				</ul>
 			)
 		}
@@ -33,22 +33,23 @@ class UserContainer extends Component {
 		return (
 			<div>
 				<h3>Github Projects</h3>
-				{pageContent}
+				{ pageContent }
 			</div>
 		);
 	}
 }
 
 UserContainer.propTypes = {
-	user: PropTypes.object
+	user: PropTypes.object,
+	loading: PropTypes.boolean,
 };
 
-const mapStateToProps = state => {
-	return {
-		user: state.user.userInfo.user,
-		loading: state.user.userInfo.isLoading
-	};
-};
+const getUserInfoState = state => ({ name: state.user.info.github.name });
+
+const mapStateToProps = state => ({
+	user: getUserInfoState(state),
+	loading: state.user.info.isLoading
+});
 
 const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators({

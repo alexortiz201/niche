@@ -5,12 +5,12 @@ import {
 } from '../actions/actionTypes';
 
 let initialState = {
-  user: {},
+  github: {},
   isLoading: false,
   errors: []
 };
-function applyUser(state = initialState, action) {
 
+function applyUser(state = initialState, action) {
   switch (action.type) {
     case REQUEST_USER_START:
       return Object.assign({}, state, {
@@ -20,7 +20,7 @@ function applyUser(state = initialState, action) {
     case REQUEST_USER_SUCCESS:
       return Object.assign({}, state, {
         isLoading: false,
-        user: action.payload
+        github: action.payload
       });
 
     case REQUEST_USER_FAILED:
